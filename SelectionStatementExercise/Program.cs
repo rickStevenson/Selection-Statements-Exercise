@@ -6,29 +6,32 @@ namespace SelectionStatementExercise
     {
         static void Main(string[] args)
         {
-            Random r = new Random(); //This line creates a new `Random` object, which is used to generate random numbers.
-            int favNumber = r.Next(1, 1000);  //This line generates a random integer between 1 and 999 and assigns it to the `favNumber` variable.
+            Console.WriteLine("What is your favorite school subject?");
+            string favSubject = Console.ReadLine();
 
-
-            Console.WriteLine("Guess my favorite number");
-            int guess = int.Parse(Console.ReadLine());
-
-            if (guess < favNumber)
+            switch (favSubject)
             {
-                Console.WriteLine("Guess is too low");
+                case "Math":
+                    Console.WriteLine("He likes math");
+                    break;
+
+                case "History":
+                    Console.WriteLine("He likes history");
+                    break;
+
+                case "Science":
+                    Console.WriteLine("He likes Science");
+                    break;
+
+                case "Gym":
+                    Console.WriteLine("He likes Gym");
+                    break;
+
+                default:
+                    Console.WriteLine("Have fun!");
+                    break;
+
             }
-            else if (guess > favNumber)
-            {
-                Console.WriteLine("Guess is too high");
-            }
-            else 
-            { 
-                Console.WriteLine("That's correct!"); 
-            }
-
-
-
-
         }
     }
 }
